@@ -1,0 +1,38 @@
+Operador Logico #3    <
+Cierre Interrogacion #4    ?
+Php Inicio #92    php
+For #70    for
+Parentesis Abre #16    (
+Identifier #6    $i
+Operador Atribucion #13    =
+Punto y coma #5    ;
+Punto y coma #5    ;
+Variable #88     $
+Identifier #6    i
+Operador Incremento o Decremento #14    ++
+Parentesis Cierre #17    )
+Llave Abre #18    {
+Switch #81    switch
+Parentesis Abre #16    (
+Identifier #6    $i
+Parentesis Cierre #17    )
+Llave Abre #18    {
+Case #29    case
+If #66    if
+Parentesis Abre #16    (
+Identifier #6    $i
+Operador Logico #7    >
+Parentesis Cierre #17    )
+Llave Abre #18    {
+Break #27    break
+Punto y coma #5    ;
+Llave Cierre #19    }
+Echo #38    echo
+Variable #88     $
+Identifier #6    i
+Punto y coma #5    ;
+Llave Cierre #19    }
+Llave Cierre #19    }
+Cierre Interrogacion #4    ?
+Operador Logico #7    >
+Fin del archivo
