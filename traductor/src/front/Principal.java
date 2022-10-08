@@ -346,7 +346,6 @@ public class Principal extends javax.swing.JFrame {
                     while ((linea = contenido.readLine()) != null) {
                          texto += linea+"\n";
                      };
-            System.out.println(texto);
             String tab = "";
             String com = "";
            if (tpnFuentes.getComponentCount()>0) {
