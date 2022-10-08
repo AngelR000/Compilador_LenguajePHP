@@ -25,25 +25,33 @@ public class Principal {
         JFlex.Main.generate(archivo);
         java_cup.Main.main(rutaS);
         
+        Path rutalexer = Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/traductor/src/lexico/Lexer.java");
+        if (Files.exists(rutalexer)) {
+            Files.delete(rutalexer);
+        }
+                Files.move(
+                Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/jflex_/src/codigo/Lexer.java"), 
+                Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/traductor/src/lexico/Lexer.java"));
         
-        Path rutasym = Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/jflex_/src/codigo/sym.java");
+        Path rutasym = Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/traductor/src/lexico/sym.java");
         if (Files.exists(rutasym)) {
             Files.delete(rutasym);
         }
                 Files.move(
                 Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/jflex_/sym.java"), 
-                Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/jflex_/src/codigo/sym.java"));
+                Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/traductor/src/lexico/sym.java"));
                 
-        Path rutasin = Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/jflex_/src/codigo/sintax.java");
-        if (!Files.exists(rutasin)) {
+        Path rutasin = Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/traductor/src/lexico/sintax.java");
+        if (Files.exists(rutasin)) {
+            Files.delete(rutasin);
+            
+        }
             Files.move(
                 Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/jflex_/sintax.java"), 
-                Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/jflex_/src/codigo/sintax.java"));
-            
-        }else{
-            Files.delete(rutasin);
-        }
+                Paths.get("C:/Users/angel/OneDrive/Documentos/7mo/Traductores/traductor/src/lexico/sintax.java"));
+        
                 
+        
          
     }
     

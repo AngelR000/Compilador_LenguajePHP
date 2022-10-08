@@ -1,4 +1,4 @@
-package codigo;
+package lexico;
 import java_cup.runtime.*;
 
 %%
@@ -35,7 +35,6 @@ DocumentationComment = "/**" {CommentContent} "*"+ "/"
 CommentContent       = ( [^*] | \*+ [^/*] )*
 
 Identifier = [:jletter:] [:jletterdigit:]*
-Variable = [$]*
 DecIntegerLiteral = 0 | [1-9][0-9]*
 
 %state STRING
@@ -117,12 +116,13 @@ DecIntegerLiteral = 0 | [1-9][0-9]*
 
 <YYINITIAL> {
 /* identifiers */ 
-{Variable}{Identifier}                   { return symbol(sym.IDENTIFIER,yytext()); }
+{Identifier} { return symbol(sym.TEXTO,yytext()); }
+" $"{Identifier}                   { return symbol(sym.IDENTIFIER_VARIABLE,yytext()); }
 {DecIntegerLiteral}            { return symbol(sym.DECINT,yytext()); }
       /* operators */
-" $" { return new Symbol(sym.VARIABLE,yytext()); }
 "," { return new Symbol(sym.COMA,yytext()); }
 "'" { return new Symbol(sym.APOSTROFE,yytext()); }
+"/" { return new Symbol(sym.DIVIDE,yytext()); }
 ":" { return new Symbol(sym.DOSPUNTOS,yytext()); }
 "<" { return new Symbol(sym.MENORQ,yytext()); }
 ">" {return new Symbol(sym.MAYORQ,yytext()); }
