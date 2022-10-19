@@ -1,0 +1,7 @@
+<?php 
+ $variable = 0;
+ $v = 12;
+ if( $v == 0){
+    $variable=2;
+}
+?>
