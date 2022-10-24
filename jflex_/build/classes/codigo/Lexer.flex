@@ -111,13 +111,13 @@ DecIntegerLiteral = 0 | [1-9][0-9]*
 <YYINITIAL>"do" { return new Symbol(sym.DO,yytext()); }
 <YYINITIAL>"while" { return new Symbol(sym.WHILE,yytext()); }
 <YYINITIAL>"for" { return new Symbol(sym.FOR,yytext()); }
-<YYINITIAL>"each" { return new Symbol(sym.EACH,yytext()); }
+<YYINITIAL>"foreach" { return new Symbol(sym.FEACH,yytext()); }
 <YYINITIAL>"php" { return new Symbol(sym.PHP_I,yytext()); }
+<YYINITIAL>"$"{Identifier} { return symbol(sym.IDENTIFIER_VARIABLE,yytext()); }
 
 <YYINITIAL> {
 /* identifiers */ 
 {Identifier} { return symbol(sym.TEXTO,yytext()); }
-" $"{Identifier}                   { return symbol(sym.IDENTIFIER_VARIABLE,yytext()); }
 {DecIntegerLiteral}            { return symbol(sym.DECINT,yytext()); }
       /* operators */
 "," { return new Symbol(sym.COMA,yytext()); }
@@ -132,7 +132,7 @@ DecIntegerLiteral = 0 | [1-9][0-9]*
 "-" { return new Symbol(sym.RESTA,yytext()); }
 "*" { return new Symbol(sym.MULTIPLICA,yytext()); }
 "&&" | "||" | "!" | "&" | "|" { return new Symbol(sym.OP_LOGICO,yytext()); }
-"==" | "!=" | ">=" | "<=" | "<<" | ">>" { return new Symbol(sym.OP_RELACIONAL,yytext()); }
+"==" | "!=" | ">=" | "<=" | "<<" | ">>" | "=>" { return new Symbol(sym.OP_RELACIONAL,yytext()); }
 "+=" | "-="  | "*=" | "/=" | "%=" | "=" { return new Symbol(sym.OP_ATRIBUCION,yytext()); }
 "++" | "--" { return new Symbol(sym.OP_INCREODEC,yytext()); }
 "(" { return new Symbol(sym.PARENTESIS_A,yytext()); }

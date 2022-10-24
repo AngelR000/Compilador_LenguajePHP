@@ -38,6 +38,7 @@ public class sym {
   public static final int ARRAY = 25;
   public static final int CORCHETE_A = 20;
   public static final int VAR = 87;
+  public static final int FEACH = 71;
   public static final int FINAL = 50;
   public static final int GOTO = 54;
   public static final int HALT_COMPILER = 2;
@@ -55,7 +56,6 @@ public class sym {
   public static final int USE = 86;
   public static final int WHILE = 69;
   public static final int EXTENDS = 49;
-  public static final int EACH = 71;
   public static final int INTERFACE = 60;
   public static final int DOSPUNTOS = 95;
   public static final int SWITCH = 81;
@@ -178,7 +178,7 @@ public class sym {
   "DO",
   "WHILE",
   "FOR",
-  "EACH",
+  "FEACH",
   "OR",
   "PRINT",
   "PRIVATE",

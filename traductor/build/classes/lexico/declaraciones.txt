@@ -1,7 +1,47 @@
 <?php 
- $variable = 0;
- $v = 12;
- if( $v == 0){
-    $variable=2;
+$variable = 0;
+$v = 12;
+$v2 = "Hello";
+$v3 = 'hello';
+$v4 = true;
+$v5 = $v4 * $v3;
+$v6= ['1' => '1'];
+
+if($a > $b) {
+$v4 = true;
+}else if ($a == $b) {
+$v4 = true;
+}else{ 
+$v4 = true;
+}
+
+while($u == 0){
+    $v5 = 12;
+}
+do{
+    $v = 7;
+
+    }while($v3 == 1)
+
+for($i = 0; $i==10; $i++){
+    $v5 = $i;
+}
+
+switch($v){
+    case 1: 
+            $v2= $v5 + $v4;
+      break;
+}
+
+function main(){
+    $v12 = "saludos";
+}
+
+function main($j){
+    $v12 = "saludos";
+}
+
+foreach($saludo as $saludos){
+    $v6 = 'nomemes';
 }
 ?>

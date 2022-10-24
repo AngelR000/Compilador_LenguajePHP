@@ -214,7 +214,7 @@ public class AnalisisLexico {
                    break;
                    
                    case 92:
-                   salida +="Coma "+ token + "    " + token.value + "\n";
+                   salida +=token + "    " + token.value + "\n";
                    break;
                    
                    case 86:
